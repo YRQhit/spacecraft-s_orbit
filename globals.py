@@ -34,19 +34,37 @@ def load_txt_file(file_path):
 import os
 current_file_path = os.getcwd()#获取当前路径
 parent_directory_path = os.path.abspath(os.path.join(current_file_path, '..'))
+parent_directory_path = os.path.abspath(os.path.join(parent_directory_path, '..'))
 
-PC_path = os.path.abspath(os.path.join(current_file_path, 'PC.txt'))
+PC_path = os.path.abspath(os.path.join(parent_directory_path, 'PC.txt'))
 PC = load_txt_file(PC_path)
 
-Cnm_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\Cnm.txt'))
+Cnm_path = os.path.abspath(os.path.join(parent_directory_path, 'OrbitPredict\Cnm.txt'))
 Cnm = load_txt_file(Cnm_path)
 C = Cnm[:deg + 1][:]
-Snm_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\Snm.txt'))
+Snm_path = os.path.abspath(os.path.join(parent_directory_path, 'OrbitPredict\Snm.txt'))
 Snm = load_txt_file(Snm_path)
 S = Snm[:deg + 1][:]
-spaceWheather_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\spaceWheather.txt'))
+spaceWheather_path = os.path.abspath(os.path.join(parent_directory_path, 'OrbitPredict\spaceWheather.txt'))
 spaceWheather = load_txt_file(spaceWheather_path)
 
-DE405Coeff_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\DE405Coeff.txt'))
+DE405Coeff_path = os.path.abspath(os.path.join(parent_directory_path, 'OrbitPredict\DE405Coeff.txt'))
 DE405Coeff = load_txt_file(DE405Coeff_path)
+
+
+
+# PC_path = os.path.abspath(os.path.join(current_file_path, 'PC.txt'))
+# PC = load_txt_file(PC_path)
+#
+# Cnm_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\Cnm.txt'))
+# Cnm = load_txt_file(Cnm_path)
+# C = Cnm[:deg + 1][:]
+# Snm_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\Snm.txt'))
+# Snm = load_txt_file(Snm_path)
+# S = Snm[:deg + 1][:]
+# spaceWheather_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\spaceWheather.txt'))
+# spaceWheather = load_txt_file(spaceWheather_path)
+#
+# DE405Coeff_path = os.path.abspath(os.path.join(current_file_path, 'OrbitPredict\DE405Coeff.txt'))
+# DE405Coeff = load_txt_file(DE405Coeff_path)
 

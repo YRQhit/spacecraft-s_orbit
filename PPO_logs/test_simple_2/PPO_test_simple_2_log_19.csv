@@ -1,2 +1,0 @@
-max_ep_len30,max_training_timesteps2000000,action_std0.6,action_std_decay_rate0.05,min_action_std0.1,action_std_decay_freq200000,update_timestep120
-episode,timestep,reward
